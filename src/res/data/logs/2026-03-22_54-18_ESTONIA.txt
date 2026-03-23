@@ -1,0 +1,37 @@
+2026-03-22T21:55:14.578682700. Guess: vanuatu. Outcome: matches=0
+2026-03-22T21:55:19.245454600. Guess: vietnam. Outcome: matches=1
+2026-03-22T21:55:29.012001. Guess: romania. Outcome: matches=3
+2026-03-22T21:55:41.192431900. Guess: lebanon. Outcome: matches=1
+2026-03-22T21:55:49.584879900. Guess: georgia. Outcome: matches=2
+2026-03-22T21:55:51.861382600. Guess: belgium. Outcome: matches=0
+2026-03-22T21:55:53.991974200. Guess: bahrain. Outcome: matches=1
+2026-03-22T21:55:58.859275600. Guess: romania. Outcome: matches=3
+2026-03-22T21:56:02.130481400. Guess: jamacia. Outcome: matches=2
+2026-03-22T21:56:06.257230500. Guess: ukraine. Outcome: matches=0
+2026-03-22T21:56:08.171543100. Guess: tunisia. Outcome: matches=2
+2026-03-22T21:56:10.844093900. Guess: moldova. Outcome: matches=1
+2026-03-22T21:56:15.718943100. Guess: st lucia. Outcome: wrong_length
+2026-03-22T21:56:21.873395500. Guess: uruguay. Outcome: matches=0
+2026-03-22T21:56:24.994488200. Guess: somalia. Outcome: matches=2
+2026-03-22T21:56:26.681853900. Guess: senegal. Outcome: matches=0
+2026-03-22T21:56:29.152603500. Guess: nigeria. Outcome: matches=2
+2026-03-22T21:56:32.846743800. Guess: namibia. Outcome: matches=2
+2026-03-22T21:58:00.337248400. Guess: albania. Outcome: matches=3
+2026-03-22T21:58:01.386584500. Guess: algeria. Outcome: matches=2
+2026-03-22T21:58:03.890695100. Guess: andorra. Outcome: matches=2
+2026-03-22T21:58:05.625763300. Guess: armenia. Outcome: matches=3
+2026-03-22T21:58:07.990795800. Guess: austria. Outcome: matches=2
+2026-03-22T21:58:09.979485400. Guess: bahamas. Outcome: matches=0
+2026-03-22T21:58:12.143461300. Guess: bahrain. Outcome: matches=1
+2026-03-22T21:58:13.209927100. Guess: belarus. Outcome: matches=0
+2026-03-22T21:58:15.942645100. Guess: belgium. Outcome: matches=0
+2026-03-22T21:58:16.994895300. Guess: bolivia. Outcome: matches=2
+2026-03-22T21:58:17.908564500. Guess: burkina. Outcome: matches=1
+2026-03-22T21:58:20.916570900. Guess: burundi. Outcome: matches=1
+2026-03-22T21:58:24.446974800. Guess: comoros. Outcome: matches=1
+2026-03-22T21:58:25.484486800. Guess: croatia. Outcome: matches=2
+2026-03-22T21:58:26.492694800. Guess: denmark. Outcome: matches=0
+2026-03-22T21:58:29.480726700. Guess: ecuador. Outcome: matches=1
+2026-03-22T21:58:33.229680800. Guess: eritriea. Outcome: wrong_length
+2026-03-22T21:58:38.800807300. Guess: eritrea. Outcome: matches=2
+2026-03-22T21:58:41.189842700. Guess: estonia. Outcome: user got it CORRECT in 37
