@@ -13,10 +13,13 @@ import java.util.Random;
  * CountryGuesser game.
  *
  * @author Mischa Potter
+ * @author Ben Lazarro
  * @version 1.0
  */
 class WordList
 {
+    public static final String ERROR_GETTING_COUNTRY_MESSAGE = "empty countries list";
+
     private static final int MIN_INDEX_NUM = 0;
 
     /**
@@ -24,9 +27,8 @@ class WordList
      * a country from the list.
      *
      * @return a country from the list
-     * @throws IOException if the
      */
-    public static String getCountry() throws IOException
+    public static String getCountry()
     {
         final Path directoriesPath;
         final Path countriesPath;
@@ -34,34 +36,40 @@ class WordList
         directoriesPath = Paths.get("src", "res", "data", "logs");
         countriesPath   = Paths.get("src", "res", "data", "countries.txt");
 
-        if (Files.notExists(directoriesPath))
-        {
-            Files.createDirectories(directoriesPath);
-        }
-
-        if (Files.notExists(countriesPath))
-        {
-            Files.createFile(countriesPath);
-            // what to do if no country file is found?
-        }
-
         try
         {
+            if (Files.notExists(directoriesPath))
+            {
+                Files.createDirectories(directoriesPath);
+            }
+
+            if (Files.notExists(countriesPath))
+            {
+                Files.createFile(countriesPath);
+            }
+
             final List<String> countries;
             final Random countryIndexNumGenerator;
             final int randomCountryIndexNum;
 
-            countries                = Files.readAllLines(countriesPath);
+            countries = Files.readAllLines(countriesPath);
+
+            if (countries.getFirst().isBlank())
+            {
+                System.out.println("Error retrieving country. Abort game.");
+                return ERROR_GETTING_COUNTRY_MESSAGE;
+            }
+
             countryIndexNumGenerator = new Random();
             randomCountryIndexNum    = countryIndexNumGenerator.nextInt(MIN_INDEX_NUM, countries.size());
+
             System.out.println(countries.get(randomCountryIndexNum));
             return countries.get(randomCountryIndexNum);
         }
         catch (final IOException e)
         {
-            e.printStackTrace();
+            System.out.println("Error with file I/O: " + e.getMessage());
         }
-
-        throw new IOException("Error getting country");
+        return ERROR_GETTING_COUNTRY_MESSAGE;
     }
 }

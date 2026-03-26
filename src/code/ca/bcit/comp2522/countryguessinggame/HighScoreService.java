@@ -12,6 +12,7 @@ import java.util.Scanner;
  * Handles reading and writing the highest score.
  *
  * @author Mischa Potter
+ * @author Ben Lazarro
  * @version 1.0
  */
 class HighScoreService
@@ -23,15 +24,7 @@ class HighScoreService
     static
     {
         scorePath = Paths.get("src", "res", "data", "data.txt");
-        try
-        {
-            getHighestScoreFromFile();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-            // throw new RuntimeException(e);
-        }
+        getHighestScoreFromFile();
     }
 
     /*
@@ -42,7 +35,7 @@ class HighScoreService
      *
      * @throws IOException if a parent directory is not found
      */
-    private static void getHighestScoreFromFile() throws IOException
+    private static void getHighestScoreFromFile()
     {
         if (Files.notExists(scorePath))
         {
@@ -53,8 +46,7 @@ class HighScoreService
             }
             catch (final IOException e)
             {
-                e.printStackTrace();
-                // throw new RuntimeException(e);
+                System.out.println("Error creating file: " + e.getMessage());
             }
             finally
             {
@@ -72,11 +64,12 @@ class HighScoreService
                 lineScanner = new Scanner(lines.getFirst());
                 lineScanner.useDelimiter("=");
                 lineScanner.next();
+
                 HIGHEST_SCORE_NUM = lineScanner.nextInt();
             }
             catch (final IOException e)
             {
-                e.printStackTrace();
+                System.out.println("Error reading from file: " + e.getMessage());
             }
         }
     }

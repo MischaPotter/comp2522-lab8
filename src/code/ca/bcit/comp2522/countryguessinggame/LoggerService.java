@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
  * Handles creating and writing to log files for the CountryGuessing game.
  *
  * @author Mischa Potter
+ * @author Ben Lazarro
  * @version 1.0
  */
 class LoggerService

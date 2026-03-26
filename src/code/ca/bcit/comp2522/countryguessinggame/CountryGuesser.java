@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Models a country guessing game.
  *
  * @author Mischa Potter
+ * @author Ben Lazarro
  * @version 1.0
  */
 class CountryGuesser
@@ -30,7 +31,14 @@ class CountryGuesser
             int numAttempts = 0;
             String input;
 
-            country       = WordList.getCountry();
+            country = WordList.getCountry();
+
+            if (country.equals(WordList.ERROR_GETTING_COUNTRY_MESSAGE))
+            {
+                System.out.println("Error getting country. Game cannot proceed.");
+                return;
+            }
+
             countryLength = country.length();
             inputScanner  = new Scanner(System.in, StandardCharsets.UTF_8);
 
@@ -55,7 +63,7 @@ class CountryGuesser
                 input = inputScanner.nextLine();
                 numAttempts++;
 
-                if (input.isEmpty())
+                if (input.isBlank())
                 {
                     System.out.println("Empty guess. Try again.");
                     LoggerService.appendGuess(input, LoggerService.LOG_OPTION_EMPTY_GUESS, numAttempts,
@@ -100,7 +108,7 @@ class CountryGuesser
         }
         catch (final IOException e)
         {
-            e.printStackTrace();
+            System.out.println("Error getting file: " + e.getMessage());
         }
     }
 
@@ -126,6 +134,7 @@ class CountryGuesser
                 numLettersCorrect++;
             }
         }
+
         return numLettersCorrect;
     }
 }
