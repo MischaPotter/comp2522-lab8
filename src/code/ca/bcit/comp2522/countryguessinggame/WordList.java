@@ -63,7 +63,8 @@ class WordList
             countryIndexNumGenerator = new Random();
             randomCountryIndexNum    = countryIndexNumGenerator.nextInt(MIN_INDEX_NUM, countries.size());
 
-            System.out.println(countries.get(randomCountryIndexNum));
+            //System.out.println(countries.get(randomCountryIndexNum));
+            // line above prints out the secret country before we even get to guess
             return countries.get(randomCountryIndexNum);
         }
         catch (final IOException e)
